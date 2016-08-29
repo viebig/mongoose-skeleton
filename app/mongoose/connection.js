@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 
-mongoose.connect(process.env.MONGO_HOST, (err) => {
+mongoose.connect(process.env.MONGO_HOST + '/' + process.env.MONGO_SCHEMA, (err) => {
 
     if (err) {
         console.log(err);
